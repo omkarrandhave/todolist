@@ -1,0 +1,35 @@
+<html>
+<head>
+	<style>
+		.group a{
+			margin: 5px;
+			border: solid silver;
+			border-width: 1px;
+			border-radius: 3px;
+			padding:3px;
+		}
+
+		.group form .btn{
+			margin-top: 10px;
+			cursor: pointer; 
+		}
+	</style>
+</head>
+
+<body>
+
+<p>Are you sure you want to delete "{{item}}" ? </p>
+
+<div class=group>
+
+<a href="{% url  'list' %}">cancel</a>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<input type="submit" name="confirm" class="btn">
+</form>
+
+</div>
+
+</body>
+</html>

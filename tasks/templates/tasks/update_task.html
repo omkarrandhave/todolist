@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+	<style>
+		form{
+			margin-bottom: 20px;
+			border-radius: 4px;
+			border: 1px solid silver;
+			padding: 10px 10px;
+		}
+
+		form .btn{
+			border: none;
+			outline: none;
+			background: #27a327;
+			cursor: pointer;
+			color : white;
+			border-radius: 4px;
+			margin : 8px;
+			padding: 5px;
+		
+		}
+
+		form .btn:hover{
+			opacity: .6;
+		}
+	</style>
+<body>
+
+<h3> Update Task </h3>
+
+<form method="POST" action="">
+{% csrf_token%}
+{{ form }}
+ <input type="submit" name = "update task" class="btn">
+</form>
+
+</body>
+</html>
